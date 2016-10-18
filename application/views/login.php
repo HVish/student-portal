@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css" media="screen" title="no title">
 	<style media="screen">
 		body {
-			background: #eee url(<?php echo base_url(); ?>assets/images/sativa.png);
+			background: #eee url(<?php echo base_url();
+			?>assets/images/sativa.png);
 		}
 
 		.avatar {
-			background: url(<?php echo base_url(); ?>assets/images/user.png);
+			background: url(<?php echo base_url();
+			?>assets/images/user.png);
 			opacity: 0.55;
 		}
 	</style>
@@ -24,9 +26,9 @@
 			<div id="output"></div>
 			<div class="avatar"></div>
 			<div class="form-box">
-				<form action="" method="">
+				<form action="" method="post">
 					<input name="user" type="text" placeholder="username">
-					<input type="password" placeholder="password">
+					<input name="pass" type="password" placeholder="password">
 					<button class="btn btn-info btn-block login" type="submit">Login</button>
 				</form>
 			</div>
@@ -35,6 +37,9 @@
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var baseurl = "<?php echo base_url(); ?>";
+</script>
 <script src="<?php echo base_url(); ?>assets/js/login.js" charset="utf-8"></script>
 
 </html>
