@@ -55,6 +55,38 @@ class Home extends CI_Controller
 	 */
     public function dashboard()
     {
-        echo 'Welcome JECRCian';
+        if($this->session->authorized) {
+			$headerData = array(
+				'username' => $this->session->username,
+				'alerts' => array(
+					'tasks' => array(
+						array(
+							'title' => 'Submit Assignment',
+							'message' => 'Your DB Lab assignment is not submitted.',
+							'progress' => '10'
+						)
+					),
+					'mails' => array(
+					 	array(
+							'image' => 'avatar-mini.jpg',
+							'from' => 'Udit Vasu',
+							'time' => '7:00pm',
+							'message' => 'Completed report on project!'
+						)
+					),
+					'notifications' => array(
+						array(
+							'message' => 'MTT2 time table',
+							'url' => '#'
+						)
+					)
+				)
+			);
+			$this->load->view('header', $headerData);
+			$this->load->view('dashboard');
+			$this->load->view('footer');
+		} else {
+			redirect(base_url());
+		}
     }
 }
