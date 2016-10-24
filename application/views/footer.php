@@ -252,6 +252,9 @@
 </div>
 <!--right sidebar end-->
 </section>
+<script type="text/javascript">
+	var base_url = "<?php echo base_url(); ?>";
+</script>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--Core js-->
 <script src="<?php echo base_url('assets/js/jquery.js');?>"></script>

@@ -89,4 +89,35 @@ class Home extends CI_Controller
 			redirect(base_url());
 		}
     }
+	public function btechPercent()
+	{
+		if($this->session->authorized) {
+			$result = $this->user->getPercentage();
+			echo $result['percentage'];
+		} else {
+			redirect(base_url());
+		}
+	}
+	public function btechProgress()
+	{
+		if($this->session->authorized) {
+			$result = $this->user->getSemMarks();
+			$data = array(
+				'progress' => array(),
+				'aggregate' => 100
+			);
+			foreach ($result as $key => $value) {
+				array_push($data['progress'], array_values($value));
+			}
+			$data['aggregate'] = floatval($this->user->getPercentage()['percentage']);
+			$data['change'] = floatval($this->user->lastSemMarksheet());
+			echo json_encode($data);
+		} else {
+			redirect(base_url());
+		}
+	}
+	public function test()
+	{
+		print_r($this->user->lastSemMarksheet());
+	}
 }

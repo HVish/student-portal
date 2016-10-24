@@ -20,6 +20,7 @@ class User extends CI_Model
 			// user session vardiables
 			$userdata = array(
 				'username' => $userData['username'],
+				'userId'=> $userData['userId'],
 				'authorized' => true,
 			);
 			// setting user session
@@ -30,4 +31,19 @@ class User extends CI_Model
 			return false;
 		}
     }
+	public function getPercentage()
+	{
+		$result = $this->db->select('(SUM(marks) / SUM(maxMarks) * 100) AS percentage')->from('marksheet')->where(array('userId' => $this->session->userId))->group_by('userId')->get();
+		return $result->row_array();
+	}
+	public function getSemMarks()
+	{
+		$result = $this->db->select('semester, SUM(marks) / SUM(maxMarks) * 100 AS percentage')->from('marksheet')->where(array('userId' => $this->session->userId))->group_by('semester')->get();
+		return $result->result_array();
+	}
+	public function lastSemMarksheet()
+	{
+		$result = $this->db->select('(SUM(marks) / SUM(maxMarks) * 100) AS percentage')->from('marksheet')->where(array('userId' => $this->session->userId))->group_by('semester')->order_by('semester', 'desc')->limit(2,0)->get()->result_array();
+		return $result[0]['percentage'] - $result[1]['percentage'];
+	}
 }

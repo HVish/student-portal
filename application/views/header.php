@@ -43,7 +43,8 @@
 			<div class="brand">
 
 				<a href="<?php echo base_url(); ?>" class="logo">
-			        <img src="<?php echo base_url('assets/images/logo.png');?>" alt="">
+			        <!-- <img src="<?php echo base_url('assets/images/logo.png');?>" alt=""> -->
+					<h2 style="color: #fff; display: inline;">Jecrc</h2>
 			    </a>
 				<div class="sidebar-toggle-box">
 					<div class="fa fa-bars"></div>
@@ -184,6 +185,17 @@
 								<span>Dashboard</span>
 							</a>
 						</li>
+						<li class="sub-menu">
+		                    <a href="javascript:;">
+		                        <i class="fa fa-envelope"></i>
+		                        <span>Mail </span>
+		                    </a>
+		                    <ul class="sub">
+		                        <li><a href="mail.html">Inbox</a></li>
+		                        <li><a href="mail_compose.html">Compose Mail</a></li>
+		                        <li><a href="mail_view.html">View Mail</a></li>
+		                    </ul>
+		                </li>
 						<li class="sub-menu">
 							<a href="javascript:;">
 								<i class="fa fa-laptop"></i>
