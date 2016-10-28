@@ -10,18 +10,20 @@
 	<meta http-equiv=”X-UA-Compatible” content=”IE=9”>
 
 	<link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.html');?>">
-	<title>Dashboard</title>
+	<title><?php echo $title; ?></title>
 	<!--Core CSS -->
 	<link href="<?php echo base_url('assets/bs3/css/bootstrap.min.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/js/jquery-ui/jquery-ui-1.10.1.custom.min.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/bootstrap-reset.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/font-awesome/css/font-awesome.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/js/jvector-map/jquery-jvectormap-1.2.2.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/clndr.css');?>" rel="stylesheet">
 	<!--clock css-->
 	<link href="<?php echo base_url('assets/js/css3clock/css/style.css');?>" rel="stylesheet">
 	<!--Morris Chart CSS -->
 	<link rel="stylesheet" href="<?php echo base_url('assets/js/morris-chart/morris.css');?>">
+	<?php if($title == "inbox") { ?>
+	<link rel="stylesheet" href="<?php echo base_url('assets/js/iCheck/skins/minimal/minimal.css'); ?>" media="screen">
+	<?php } ?>
 	<!-- Custom styles for this template -->
 	<link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/style-responsive.css');?>" rel="stylesheet" />
@@ -191,7 +193,7 @@
 		                        <span>Mail </span>
 		                    </a>
 		                    <ul class="sub">
-		                        <li><a href="mail.html">Inbox</a></li>
+		                        <li><a href="<?php echo base_url('/home/inbox'); ?>">Inbox</a></li>
 		                        <li><a href="mail_compose.html">Compose Mail</a></li>
 		                        <li><a href="mail_view.html">View Mail</a></li>
 		                    </ul>

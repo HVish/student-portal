@@ -272,8 +272,6 @@
 <script src="<?php echo base_url('assets/cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/calendar/moment-2.2.1.js');?>"></script>
 <script src="<?php echo base_url('assets/js/evnt.calendar.init.js');?>"></script>
-<script src="<?php echo base_url('assets/js/jvector-map/jquery-jvectormap-1.2.2.min.js');?>"></script>
-<script src="<?php echo base_url('assets/js/jvector-map/jquery-jvectormap-us-lcc-en.js');?>"></script>
 <script src="<?php echo base_url('assets/js/gauge/gauge.js');?>"></script>
 <!--clock init-->
 <script src="<?php echo base_url('assets/js/css3clock/js/css3clock.js');?>"></script>
@@ -291,11 +289,18 @@
 <script src="<?php echo base_url('assets/js/flot-chart/jquery.flot.pie.resize.js');?>"></script>
 <script src="<?php echo base_url('assets/js/flot-chart/jquery.flot.animator.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/flot-chart/jquery.flot.growraf.js');?>"></script>
-<script src="<?php echo base_url('assets/js/dashboard.js');?>"></script>
 <script src="<?php echo base_url('assets/js/jquery.customSelect.min.js');?>"></script>
 <!--common script init for all pages-->
 <script src="<?php echo base_url('assets/js/scripts.js');?>"></script>
 <!--script for this page-->
+<!-- page level scripts -->
+<?php if($title == "dashboard") { ?>
+	<script src="<?php echo base_url('assets/js/dashboard.js');?>" charset="utf-8"></script>
+<?php } ?>
+<?php if($title == "inbox") { ?>
+	<script src="<?php echo base_url('assets/js/iCheck/jquery.icheck.js');?>" charset="utf-8"></script>
+	<script src="<?php echo base_url('assets/js/icheck-init.js');?>" charset="utf-8"></script>
+<?php } ?>
 </body>
 
 </html>

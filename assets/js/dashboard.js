@@ -88,7 +88,6 @@
 				$('.visit-chart-value').html(JSON.parse(result).aggregate.toFixed(2));
 				var arrow = JSON.parse(result).change > 0 ? '<i class="fa fa-arrow-up"></i>' : '<i class="fa fa-arrow-down"></i>';
 				$('.visit-chart-title').html(arrow + Math.abs(JSON.parse(result).change) + '%');
-				console.log(result);
 			});
 
 
