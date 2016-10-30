@@ -99,9 +99,9 @@
 				<div class="profile-nav alt">
 					<section class="panel">
 						<div class="user-heading alt clock-row terques-bg">
-							<h1>December 14</h1>
-							<p class="text-left">2014, Friday</p>
-							<p class="text-left">7:53 PM</p>
+							<h1><?php echo date("F d"); ?></h1>
+							<p class="text-left"><?php echo date("o, l"); ?></p>
+							<p class="text-left dynamic-time"><?php echo date("h:i:s a"); ?></p>
 						</div>
 						<ul id="clock">
 							<li id="sec"></li>
@@ -188,7 +188,7 @@
 					</div>
 					<div class="col-lg-5 event-list-block">
 						<div class="cal-day">
-							<span>Today</span> Friday
+							<span>Today</span> <?php echo date("l"); ?>
 						</div>
 						<ul class="event-list">
 							<li>Lunch with jhon @ 3:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>

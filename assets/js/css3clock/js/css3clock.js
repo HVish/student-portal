@@ -4,7 +4,7 @@ $(function() {
         var seconds = new Date().getSeconds();
         var sdegree = seconds * 6;
         var srotate = "rotate(" + sdegree + "deg)";
-
+		$('.dynamic-time').html(moment(new Date()).format("hh:mm:ss A"));
         $("#sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
 
     }, 1000 );
