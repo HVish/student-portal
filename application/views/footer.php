@@ -301,6 +301,17 @@
 	<script src="<?php echo base_url('assets/js/iCheck/jquery.icheck.js');?>" charset="utf-8"></script>
 	<script src="<?php echo base_url('assets/js/icheck-init.js');?>" charset="utf-8"></script>
 <?php } ?>
+<?php if($title == "compose") { ?>
+	<script src="<?php echo base_url('assets/js/bootstrap-wysihtml5/wysihtml5-0.3.0.js');?>" charset="utf-8"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap-wysihtml5/bootstrap-wysihtml5.js');?>" charset="utf-8"></script>
+	<script src="<?php echo base_url('assets/js/iCheck/jquery.icheck.js');?>" charset="utf-8"></script>
+	<script src="<?php echo base_url('assets/js/icheck-init.js');?>" charset="utf-8"></script>
+	<script type="text/javascript">
+    	//wysihtml5 start
+	    $('.wysihtml5').wysihtml5();
+	    //wysihtml5 end
+	</script>
+<?php } ?>
 </body>
 
 </html>

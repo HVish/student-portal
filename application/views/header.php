@@ -22,7 +22,13 @@
 	<!--Morris Chart CSS -->
 	<link rel="stylesheet" href="<?php echo base_url('assets/js/morris-chart/morris.css');?>">
 	<?php if($title == "inbox") { ?>
-	<link rel="stylesheet" href="<?php echo base_url('assets/js/iCheck/skins/minimal/minimal.css'); ?>" media="screen">
+		<!--icheck-->
+		<link rel="stylesheet" href="<?php echo base_url('assets/js/iCheck/skins/minimal/minimal.css'); ?>" media="screen">
+	<?php } ?>
+	<?php if($title == "compose") { ?>
+		<!--icheck-->
+		<link rel="stylesheet" href="<?php echo base_url('assets/js/iCheck/skins/minimal/minimal.css'); ?>" media="screen">
+		<link rel="stylesheet" href="<?php echo base_url('assets/js/bootstrap-wysihtml5/bootstrap-wysihtml5.css'); ?>" media="screen">
 	<?php } ?>
 	<!-- Custom styles for this template -->
 	<link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
@@ -194,7 +200,7 @@
 		                    </a>
 		                    <ul class="sub">
 		                        <li><a href="<?php echo base_url('/home/inbox'); ?>">Inbox</a></li>
-		                        <li><a href="mail_compose.html">Compose Mail</a></li>
+		                        <li><a href="<?php echo base_url('/home/compose'); ?>">Compose Mail</a></li>
 		                        <li><a href="mail_view.html">View Mail</a></li>
 		                    </ul>
 		                </li>

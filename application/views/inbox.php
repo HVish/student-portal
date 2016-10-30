@@ -5,7 +5,7 @@
 			<div class="col-sm-3">
 				<section class="panel">
 					<div class="panel-body">
-						<a href="mail_compose.html" class="btn btn-compose">
+						<a href="<?php echo base_url('/home/compose'); ?>" class="btn btn-compose">
                             Compose Mail
                         </a>
 						<ul class="nav nav-pills nav-stacked mail-nav">
