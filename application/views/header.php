@@ -201,7 +201,6 @@
 		                    <ul class="sub">
 		                        <li><a href="<?php echo base_url('/home/inbox'); ?>">Inbox</a></li>
 		                        <li><a href="<?php echo base_url('/home/compose'); ?>">Compose Mail</a></li>
-		                        <li><a href="mail_view.html">View Mail</a></li>
 		                    </ul>
 		                </li>
 						<li class="sub-menu">

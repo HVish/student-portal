@@ -86,7 +86,7 @@
 				};
 				var plot = $.plot($("#daily-visit-chart"), data, options);
 				$('.visit-chart-value').html(JSON.parse(result).aggregate.toFixed(2));
-				var arrow = JSON.parse(result).change > 0 ? '<i class="fa fa-arrow-up"></i>' : '<i class="fa fa-arrow-down"></i>';
+				var arrow = JSON.parse(result).change >= 0 ? '<i class="fa fa-arrow-up"></i>' : '<i class="fa fa-arrow-down"></i>';
 				$('.visit-chart-title').html(arrow + Math.abs(JSON.parse(result).change) + '%');
 			});
 
@@ -309,7 +309,8 @@
 				colorStart: '#fa8564', // Colors
 				colorStop: '#fa8564', // just experiment with them
 				strokeColor: '#F1F1F1', // to see which ones work best for you
-				generateGradient: true
+				generateGradient: true,
+				percentColors: [[0.0, "#ff0000" ], [0.50, "#f9c802"], [1.0, "#a9d70b"]]
 			};
 
 

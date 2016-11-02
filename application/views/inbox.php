@@ -10,7 +10,7 @@
                         </a>
 						<ul class="nav nav-pills nav-stacked mail-nav">
 							<li class="active">
-								<a href="mail.html"> <i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right inbox-notification">9</span></a>
+								<a href="<?php echo base_url('/home/inbox'); ?>"> <i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right inbox-notification">9</span></a>
 							</li>
 							<li>
 								<a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a>
