@@ -87,47 +87,27 @@
 				var plot = $.plot($("#daily-visit-chart"), data, options);
 				$('.visit-chart-value').html(JSON.parse(result).aggregate.toFixed(2));
 				var arrow = JSON.parse(result).change >= 0 ? '<i class="fa fa-arrow-up"></i>' : '<i class="fa fa-arrow-down"></i>';
-				$('.visit-chart-title').html(arrow + Math.abs(JSON.parse(result).change) + '%');
+				$('.visit-chart-title').html(arrow + Math.abs(JSON.parse(result).change.toFixed(2)) + '%');
 			});
 
 
+			// Branch Topper
+			$.get(base_url + 'home/branchToppers', function (result) {
+				result = JSON.parse(result);
+				$('.branch-toppers .progress-stat-bar li').eq(0).attr('data-percent', result[0].percentage);
+				$('.branch-toppers .progress-stat-bar li').eq(1).attr('data-percent', result[1].percentage);
+				$('.branch-toppers .progress-stat-bar li').eq(2).attr('data-percent', result[2].percentage);
 
-            // DONUT
-            var dataPie = [{
-                label: "Samsung",
-                data: 50
-            }, {
-                label: "Nokia",
-                data: 50
-            }, {
-                label: "Syphony",
-                data: 100
-            }];
+				$('.branch-toppers .bar-legend li').eq(0).html('<span class="bar-legend-pointer pink"></span>' + result[0].name);
+				$('.branch-toppers .bar-legend li').eq(1).html('<span class="bar-legend-pointer green"></span>' + result[1].name);
+				$('.branch-toppers .bar-legend li').eq(2).html('<span class="bar-legend-pointer yellow-b"></span>' + result[2].name);
 
-            $.plot($(".sm-pie"), dataPie, {
-                series: {
-                    pie: {
-                        innerRadius: 0.7,
-                        show: true,
-                        stroke: {
-                            width: 0.1,
-                            color: '#ffffff'
-                        }
-                    }
-
-                },
-
-                legend: {
-                    show: true
-                },
-                grid: {
-                    hoverable: true,
-                    clickable: true
-                },
-
-                colors: ["#ffdf7c", "#b2def7", "#efb3e6"]
-            });
-
+				$('.progress-stat-bar li').each(function () {
+		            $(this).find('.progress-stat-percent').animate({
+		                height: $(this).attr('data-percent')
+		            }, 1000);
+		        });
+			});
         }
 
 
@@ -222,12 +202,6 @@
         $(document).on('click', '.event-close', function () {
             $(this).closest("li").remove();
             return false;
-        });
-
-        $('.progress-stat-bar li').each(function () {
-            $(this).find('.progress-stat-percent').animate({
-                height: $(this).attr('data-percent')
-            }, 1000);
         });
 
         /*Calendar*/

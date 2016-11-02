@@ -49,4 +49,9 @@ class User extends CI_Model
 		}
 		return $result[0]['percentage'] - $result[1]['percentage'];
 	}
+	public function branchToppers()
+	{
+		$result = $this->db->select('student.studentId, student.name, (SUM(marks) / SUM(maxMarks) * 100) AS percentage')->from('marksheet')->join('student', 'student.studentId = marksheet.studentId')->group_by('studentId')->order_by('(SUM(marks) / SUM(maxMarks) * 100)','DESC')->limit(3,0)->get()->result_array();
+		return $result;
+	}
 }

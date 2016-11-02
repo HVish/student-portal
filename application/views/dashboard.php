@@ -43,7 +43,20 @@
 					<div class="panel-body">
 						<div class="top-stats-panel">
 							<h4 class="widget-h">Branch Toppers</h4>
-							<div class="sm-pie">
+							<div class="bar-stats branch-toppers">
+								<ul class="progress-stat-bar clearfix">
+									<li data-percent="50%"><span class="progress-stat-percent pink"></span></li>
+									<li data-percent="90%"><span class="progress-stat-percent"></span></li>
+									<li data-percent="70%"><span class="progress-stat-percent yellow-b"></span></li>
+								</ul>
+								<ul class="bar-legend">
+									<li><span class="bar-legend-pointer pink"></span> Topper1</li>
+									<li><span class="bar-legend-pointer green"></span> Topper2</li>
+									<li><span class="bar-legend-pointer yellow-b"></span> Topper3</li>
+								</ul>
+								<div class="daily-sales-info">
+									<span class="sales-count">1200 </span> <span class="sales-label">Products Sold</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -53,21 +66,10 @@
 				<section class="panel">
 					<div class="panel-body">
 						<div class="top-stats-panel">
-							<h4 class="widget-h">Daily Attendence</h4>
-							<div class="bar-stats">
-								<ul class="progress-stat-bar clearfix">
-									<li data-percent="50%"><span class="progress-stat-percent pink"></span></li>
-									<li data-percent="90%"><span class="progress-stat-percent"></span></li>
-									<li data-percent="70%"><span class="progress-stat-percent yellow-b"></span></li>
-								</ul>
-								<ul class="bar-legend">
-									<li><span class="bar-legend-pointer pink"></span> New York</li>
-									<li><span class="bar-legend-pointer green"></span> Los Angels</li>
-									<li><span class="bar-legend-pointer yellow-b"></span> Dallas</li>
-								</ul>
-								<div class="daily-sales-info">
-									<span class="sales-count">1200 </span> <span class="sales-label">Products Sold</span>
-								</div>
+							<h4 class="widget-h">Your Rank</h4>
+							<div class="your-rank">
+								<span class="rank-icon"><i class="fa fa-trophy"></i></span>
+								<div class="rank-value">1<sup>st</sup></div>
 							</div>
 						</div>
 					</div>

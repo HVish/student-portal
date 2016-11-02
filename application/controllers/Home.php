@@ -191,8 +191,13 @@ class Home extends CI_Controller
 			redirect(base_url());
 		}
 	}
+	public function branchToppers($value='')
+	{
+		echo json_encode($this->user->branchToppers());
+	}
 	public function test()
 	{
-		print_r($this->user->lastSemMarksheet());
+		echo "<pre>";
+		print_r($this->user->branchToppers());
 	}
 }
