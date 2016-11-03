@@ -94,13 +94,18 @@
 			// Branch Topper
 			$.get(base_url + 'home/branchToppers', function (result) {
 				result = JSON.parse(result);
+				// bar's value
 				$('.branch-toppers .progress-stat-bar li').eq(0).attr('data-percent', result[0].percentage);
 				$('.branch-toppers .progress-stat-bar li').eq(1).attr('data-percent', result[1].percentage);
 				$('.branch-toppers .progress-stat-bar li').eq(2).attr('data-percent', result[2].percentage);
 
+				// topper's name (chart-legends)
 				$('.branch-toppers .bar-legend li').eq(0).html('<span class="bar-legend-pointer pink"></span>' + result[0].name);
 				$('.branch-toppers .bar-legend li').eq(1).html('<span class="bar-legend-pointer green"></span>' + result[1].name);
 				$('.branch-toppers .bar-legend li').eq(2).html('<span class="bar-legend-pointer yellow-b"></span>' + result[2].name);
+
+				// highest percentage
+				$('.sales-count').html(parseFloat(result[0].percentage).toFixed(2) + '%');
 
 				$('.progress-stat-bar li').each(function () {
 		            $(this).find('.progress-stat-percent').animate({

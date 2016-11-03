@@ -30,7 +30,7 @@
 
 								</div>
 								<ul class="chart-meta clearfix">
-									<li class="pull-left visit-chart-value">3233</li>
+									<li class="pull-left visit-chart-value">100</li>
 									<li class="pull-right visit-chart-title"><i class="fa fa-arrow-up"></i> 15%</li>
 								</ul>
 							</div>
@@ -55,7 +55,7 @@
 									<li><span class="bar-legend-pointer yellow-b"></span> Topper3</li>
 								</ul>
 								<div class="daily-sales-info">
-									<span class="sales-count">1200 </span> <span class="sales-label">Products Sold</span>
+									<span class="sales-count">100% </span> <span class="sales-label"> is highest.</span>
 								</div>
 							</div>
 						</div>
