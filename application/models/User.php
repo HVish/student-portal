@@ -33,7 +33,7 @@ class User extends CI_Model
     }
 	public function getPercentage()
 	{
-		$result = $this->db->select('(SUM(marks) / SUM(maxMarks) * 100) AS percentage')->from('marksheet')->where(array('studentId' => $this->session->studentId))->group_by('studentId')->get();
+		$result = $this->db->select('percentage')->from('percentage')->where(array('studentId' => $this->session->studentId))->get();
 		return $result->row_array();
 	}
 	public function getSemMarks()
@@ -51,7 +51,16 @@ class User extends CI_Model
 	}
 	public function branchToppers()
 	{
-		$result = $this->db->select('student.studentId, student.name, (SUM(marks) / SUM(maxMarks) * 100) AS percentage')->from('marksheet')->join('student', 'student.studentId = marksheet.studentId')->group_by('studentId')->order_by('(SUM(marks) / SUM(maxMarks) * 100)','DESC')->limit(3,0)->get()->result_array();
+		$result = $this->db->select('studentId, name, percentage')->from('percentage')->limit(3,0)->get()->result_array();
+		return $result;
+	}
+	public function yourRank()
+	{
+		$test = $this->db->select('COUNT(studentId) AS found')->from('marksheet')->where(array('studentId' => $this->session->studentId))->get()->row_array();
+		if($test['found'] == '0') {
+			return array('rank'=> '0');
+		}
+		$result = $this->db->select('COUNT(*) + 1 AS rank')->from('percentage AS my')->join('percentage AS others', 'others.percentage > my.percentage')->where(array('my.studentId' => $this->session->studentId))->get()->row_array();
 		return $result;
 	}
 }

@@ -115,7 +115,19 @@
 			});
         }
 
-
+		// Your rank
+		$.get(base_url + '/home/yourRank', function (result) {
+			result = JSON.parse(result);
+			var rank = result.rank;
+			switch (rank % 10) {
+				case 0: rank = "N/A"; break;
+				case 1: rank += '<sup>st</sup>'; break;
+				case 2: rank += '<sup>nd</sup>'; break;
+				case 3: rank += '<sup>rd</sup>'; break;
+				default:rank += '<sup>th</sup>';
+			}
+			$('.rank-value').html(rank);
+		});
 
         /*==Slim Scroll ==*/
         if ($.fn.slimScroll) {
