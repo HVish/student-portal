@@ -199,9 +199,13 @@ class Home extends CI_Controller
 	{
 		echo json_encode($this->user->yourRank());
 	}
+	public function attendance()
+	{
+		echo json_encode($this->user->attendance());
+	}
 	public function test()
 	{
 		echo "<pre>";
-		print_r($this->user->yourRank());
+		print_r($this->user->attendance());
 	}
 }
