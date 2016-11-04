@@ -145,6 +145,7 @@
             });
         }
 
+		// student attandance chart for analysis (in percentage)
         if (Morris.EventEmitter) {
             // Use Morris.Area instead of Morris.Line
             $.get(base_url + '/home/attendance', function (result) {

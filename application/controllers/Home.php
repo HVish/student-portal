@@ -90,15 +90,21 @@ class Home extends CI_Controller
 			redirect(base_url());
 		}
     }
+	/*
+		Btech aggregate percentage
+	 */
 	public function btechPercent()
 	{
 		if($this->session->authorized) {
 			$result = $this->user->getPercentage();
 			echo $result['percentage'];
 		} else {
-			redirect(base_url());
+			echo "unautherized";
 		}
 	}
+	/*
+		Btech semester-wise progress
+	 */
 	public function btechProgress()
 	{
 		if($this->session->authorized) {
@@ -117,6 +123,9 @@ class Home extends CI_Controller
 			redirect(base_url());
 		}
 	}
+	/*
+		access inbox
+	 */
 	public function inbox()
 	{
 		if($this->session->authorized) {
@@ -154,6 +163,9 @@ class Home extends CI_Controller
 			redirect(base_url());
 		}
 	}
+	/*
+		Compose new email
+	 */
 	public function compose()
 	{
 		if($this->session->authorized) {
@@ -191,21 +203,49 @@ class Home extends CI_Controller
 			redirect(base_url());
 		}
 	}
+	/*
+		branch topper analysis
+	 */
 	public function branchToppers($value='')
 	{
-		echo json_encode($this->user->branchToppers());
+		if($this->session->authorized) {
+			echo json_encode($this->user->branchToppers());
+		} else {
+			echo "unautherized";
+		}
 	}
+	/*
+		student rank in his/her branch
+	 */
 	public function yourRank()
 	{
-		echo json_encode($this->user->yourRank());
+		if($this->session->authorized) {
+			echo json_encode($this->user->yourRank());
+		} else {
+			echo "unautherized";
+		}
 	}
+	/*
+		student attendance analysis of all subjects (in percentages)
+	 */
 	public function attendance()
 	{
-		echo json_encode($this->user->attendance());
+		if($this->session->authorized) {
+			echo json_encode($this->user->attendance());
+		} else {
+			echo "unautherized";
+		}
 	}
+	/*
+		module testing
+	 */
 	public function test()
 	{
-		echo "<pre>";
-		print_r($this->user->attendance());
+		if($this->session->authorized) {
+			echo "<pre>";
+			print_r($this->user->attendance());
+		} else {
+			echo "unautherized";
+		}
 	}
 }
