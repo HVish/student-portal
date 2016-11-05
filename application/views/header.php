@@ -30,6 +30,9 @@
 		<link rel="stylesheet" href="<?php echo base_url('assets/js/iCheck/skins/minimal/minimal.css'); ?>" media="screen">
 		<link rel="stylesheet" href="<?php echo base_url('assets/js/bootstrap-wysihtml5/bootstrap-wysihtml5.css'); ?>" media="screen">
 	<?php } ?>
+	<?php if($title == "profile") { ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/bootstrap-fileupload/bootstrap-fileupload.css'); ?>" />
+	<?php } ?>
 	<!-- Custom styles for this template -->
 	<link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/style-responsive.css');?>" rel="stylesheet" />

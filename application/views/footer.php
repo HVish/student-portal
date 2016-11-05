@@ -312,6 +312,12 @@
 	    //wysihtml5 end
 	</script>
 <?php } ?>
+<?php if($title == "profile") { ?>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-fileupload/bootstrap-fileupload.js');?>"></script>
+	<script>
+	    // profile scripts
+	</script>
+<?php } ?>
 </body>
 
 </html>
