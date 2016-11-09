@@ -168,7 +168,7 @@
 			                <b class="caret"></b>
 			            </a>
 						<ul class="dropdown-menu extended logout">
-							<li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+							<li><a href="<?php echo base_url('/profile') ?>"><i class=" fa fa-suitcase"></i>Profile</a></li>
 							<li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
 							<li><a href="<?php echo base_url('home/logout');?>"><i class="fa fa-key"></i> Log Out</a></li>
 						</ul>
@@ -191,7 +191,7 @@
 				<div class="leftside-navigation">
 					<ul class="sidebar-menu" id="nav-accordion">
 						<li>
-							<a class="active" href="<?php echo base_url()?>">
+							<a href="<?php echo base_url('/home/dashboard')?>">
 								<i class="fa fa-dashboard"></i>
 								<span>Dashboard</span>
 							</a>
@@ -216,14 +216,11 @@
 								<li><a href="horizontal_menu.html">RTU Marks</a></li>
 							</ul>
 						</li>
-						<li class="sub-menu">
-							<a href="javascript:;">
+						<li>
+							<a href="<?php echo base_url('/profile') ?>">
 								<i class="fa fa-book"></i>
 								<span>Personel Details</span>
 							</a>
-							<ul class="sub">
-								<li><a href="general.html">General</a></li>
-							</ul>
 						</li>
 						<li class="sub-menu">
 							<a href="javascript:;">

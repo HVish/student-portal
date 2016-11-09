@@ -13,6 +13,13 @@
                 autoExpand: true,
                 classExpand: 'dcjq-current-parent'
             });
+			var $navElement = $('.sidebar-menu li a[href="'+location.href+'"]');
+			if($navElement.parent().parent().hasClass('sidebar-menu')) {
+				$navElement.addClass('active');
+			} else {
+				$navElement.parents('li.sub-menu').children("a").click();
+				$navElement.parent().addClass('active');
+			}
         }
         /*==Slim Scroll ==*/
         if ($.fn.slimScroll) {
