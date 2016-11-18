@@ -2,8 +2,11 @@
     "use strict";
     $(document).ready(function () {
         if ($.fn.plot) {
-
+			// start loader
+			document.dispatchEvent(new CustomEvent('loadingStart'));
 			$.get(base_url + 'home/btechProgress', function (result) {
+				// stop loader
+				document.dispatchEvent(new CustomEvent('loadingComplete'));
 				var data = ([{
 					data: JSON.parse(result).progress,
 					lines: {
@@ -90,9 +93,12 @@
 				$('.visit-chart-title').html(arrow + Math.abs(JSON.parse(result).change.toFixed(2)) + '%');
 			});
 
-
+			// start loader
+			document.dispatchEvent(new CustomEvent('loadingStart'));
 			// Branch Topper
 			$.get(base_url + 'home/branchToppers', function (result) {
+				// stop loader
+				document.dispatchEvent(new CustomEvent('loadingComplete'));
 				result = JSON.parse(result);
 				// bar's value
 				$('.branch-toppers .progress-stat-bar li').eq(0).attr('data-percent', result[0].percentage);
@@ -115,8 +121,12 @@
 			});
         }
 
+		// start loader
+		// document.dispatchEvent(new CustomEvent('loadingStart'));
 		// Your rank
 		$.get(base_url + '/home/yourRank', function (result) {
+			// stop loader
+			document.dispatchEvent(new CustomEvent('loadingComplete'));
 			result = JSON.parse(result);
 			var rank = result.rank;
 			switch (rank % 10) {
@@ -147,8 +157,12 @@
 
 		// student attandance chart for analysis (in percentage)
         if (Morris.EventEmitter) {
+			// start loader
+			document.dispatchEvent(new CustomEvent('loadingStart'));
             // Use Morris.Area instead of Morris.Line
             $.get(base_url + '/home/attendance', function (result) {
+				// stop loader
+				document.dispatchEvent(new CustomEvent('loadingComplete'));
             	result = JSON.parse(result);
 				var keys = Object.keys(result[0]);
 				var ykeys = keys.splice(keys.indexOf('date'), 1);
@@ -239,8 +253,11 @@
             });
         });
     });
-
+	// start loader
+	document.dispatchEvent(new CustomEvent('loadingStart'));
 	$.get(base_url + 'home/btechPercent', function (data) {
+		// stop loader
+		document.dispatchEvent(new CustomEvent('loadingComplete'));
 		if (Gauge) {
 			/*Knob*/
 			var opts = {

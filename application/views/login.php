@@ -14,6 +14,10 @@
 	<link href="<?php echo base_url('assets/bs3/css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/bootstrap-reset.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet" />
+	<!-- PNotify -->
+	<link href="<?php echo base_url('assets/js/pnotify/dist/pnotify.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/js/pnotify/dist/pnotify.buttons.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/js/pnotify/dist/pnotify.nonblock.css');?>" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
@@ -35,17 +39,6 @@
 	<div class="container">
 		<form class="form-signin" action="<?php echo base_url().'home/login' ?>" method="post">
 			<h2 class="form-signin-heading">sign in now</h2>
-			<div class="alert alert-danger login-error" style="margin-bottom: 0px;">
-				<span class="alert-icon"><i class="fa fa-bolt"></i></span>
-				<div class="notification-info">
-					<ul class="clearfix notification-meta">
-						<li class="pull-left notification-sender"><span><a href="#">Unautherized!!</a></span> Wrong credentials. </li>
-					</ul>
-					<p>
-						Try again...
-					</p>
-				</div>
-			</div>
 			<div class="login-wrap">
 				<div class="user-login-info">
 					<input type="text" name="username" class="form-control" placeholder="User ID" autofocus>
@@ -96,6 +89,15 @@
 	<!--Core js-->
 	<script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
 	<script src="<?php echo base_url('assets/bs3/js/bootstrap.min.js'); ?>"></script>
+	<!-- NProgress -->
+	<script src="<?php echo base_url('assets/js/nprogress/nprogress.js');?>"></script>
+	<!-- bootstrap-progressbar -->
+	<script src="<?php echo base_url('assets/js/bootstrap-progressbar/bootstrap-progressbar.min.js');?>"></script>
+	<!-- PNotify -->
+	<script src="<?php echo base_url('assets/js/pnotify/dist/pnotify.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/pnotify/dist/pnotify.buttons.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/pnotify/dist/pnotify.nonblock.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/loader.js');?>"></script>
 	<script src="<?php echo base_url('assets/js/login.js'); ?>" charset="utf-8"></script>
 
 </body>

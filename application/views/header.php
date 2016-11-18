@@ -17,6 +17,10 @@
 	<link href="<?php echo base_url('assets/css/bootstrap-reset.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/font-awesome/css/font-awesome.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/clndr.css');?>" rel="stylesheet">
+	<!-- PNotify -->
+	<link href="<?php echo base_url('assets/js/pnotify/dist/pnotify.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/js/pnotify/dist/pnotify.buttons.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/js/pnotify/dist/pnotify.nonblock.css');?>" rel="stylesheet">
 	<!--clock css-->
 	<link href="<?php echo base_url('assets/js/css3clock/css/style.css');?>" rel="stylesheet">
 	<!--Morris Chart CSS -->
