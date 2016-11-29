@@ -1,6 +1,7 @@
 (function ($) {
     "use strict";
     $(document).ready(function () {
+		NProgress.done();
         /*==Left Navigation Accordion ==*/
         if ($.fn.dcAccordion) {
             $('#nav-accordion').dcAccordion({

@@ -9,7 +9,8 @@
 	<link rel="shortcut icon" href="<?php echo base_url('images/favicon.html'); ?>">
 
 	<title>Login</title>
-
+	<!-- NProgress -->
+	<script src="<?php echo base_url('assets/js/nprogress/nprogress.js');?>"></script>
 	<!--Core CSS -->
 	<link href="<?php echo base_url('assets/bs3/css/bootstrap.min.css'); ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/bootstrap-reset.css'); ?>" rel="stylesheet">
@@ -35,7 +36,9 @@
 </head>
 
 <body class="login-body">
-
+	<script type="text/javascript">
+		NProgress.start();
+	</script>
 	<div class="container">
 		<form class="form-signin" action="<?php echo base_url().'home/login' ?>" method="post">
 			<h2 class="form-signin-heading">sign in now</h2>
@@ -89,8 +92,6 @@
 	<!--Core js-->
 	<script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
 	<script src="<?php echo base_url('assets/bs3/js/bootstrap.min.js'); ?>"></script>
-	<!-- NProgress -->
-	<script src="<?php echo base_url('assets/js/nprogress/nprogress.js');?>"></script>
 	<!-- bootstrap-progressbar -->
 	<script src="<?php echo base_url('assets/js/bootstrap-progressbar/bootstrap-progressbar.min.js');?>"></script>
 	<!-- PNotify -->

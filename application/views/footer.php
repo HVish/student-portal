@@ -290,8 +290,6 @@
 <script src="<?php echo base_url('assets/js/flot-chart/jquery.flot.animator.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/flot-chart/jquery.flot.growraf.js');?>"></script>
 <script src="<?php echo base_url('assets/js/jquery.customSelect.min.js');?>"></script>
-<!-- NProgress -->
-<script src="<?php echo base_url('assets/js/nprogress/nprogress.js');?>"></script>
 <!-- bootstrap-progressbar -->
 <script src="<?php echo base_url('assets/js/bootstrap-progressbar/bootstrap-progressbar.min.js');?>"></script>
 <!-- PNotify -->
@@ -300,7 +298,6 @@
 <script src="<?php echo base_url('assets/js/pnotify/dist/pnotify.nonblock.js');?>"></script>
 <!--common script init for all pages-->
 <script src="<?php echo base_url('assets/js/scripts.js');?>"></script>
-<script src="<?php echo base_url('assets/js/loader.js');?>"></script>
 <!--script for this page-->
 <!-- page level scripts -->
 <?php if($title == "dashboard") { ?>

@@ -11,6 +11,9 @@
 
 	<link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.html');?>">
 	<title><?php echo $title; ?></title>
+	<!-- NProgress -->
+	<script src="<?php echo base_url('assets/js/nprogress/nprogress.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/loader.js');?>"></script>
 	<!--Core CSS -->
 	<link href="<?php echo base_url('assets/bs3/css/bootstrap.min.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/js/jquery-ui/jquery-ui-1.10.1.custom.min.css');?>" rel="stylesheet">
@@ -51,6 +54,9 @@
 </head>
 
 <body>
+	<script type="text/javascript">
+		NProgress.start();
+	</script>
 	<section id="container">
 		<!--header start-->
 		<header class="header fixed-top clearfix">

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	NProgress.done();
     // handle click event on form submit
     $('.form-signin').submit(function (e) {
 		// prevent default submission of sign-in form
