@@ -236,6 +236,48 @@ class Home extends CI_Controller
 			echo "unautherized";
 		}
 	}
+    /*
+        student marksheet for particular semester
+    */
+    public function marksheet($semester)
+    {
+        if($this->session->authorized) {
+			$headerData = array(
+				'username' => $this->session->username,
+				'title' => 'marksheet',
+				'alerts' => array(
+					'tasks' => array(
+						array(
+							'title' => 'Submit Assignment',
+							'message' => 'Your DB Lab assignment is not submitted.',
+							'progress' => '10'
+						)
+					),
+					'mails' => array(
+					 	array(
+							'image' => 'avatar-mini.jpg',
+							'from' => 'Udit Vasu',
+							'time' => '7:00pm',
+							'message' => 'Completed report on project!'
+						)
+					),
+					'notifications' => array(
+						array(
+							'message' => 'MTT2 time table',
+							'url' => '#'
+						)
+					)
+				)
+			);
+            $data['tabledata'] = $this->user->marksheetData($semester);
+            $data['semester'] = $semester;
+			$this->load->view('header', $headerData);
+			$this->load->view('marksheet', $data);
+			$this->load->view('footer');
+		} else {
+			redirect(base_url());
+		}
+    }
 	/*
 		module testing
 	 */
@@ -243,7 +285,7 @@ class Home extends CI_Controller
 	{
 		if($this->session->authorized) {
 			echo "<pre>";
-			print_r($this->user->attendance());
+			print_r($this->user->marksheetData(3));
 		} else {
 			echo "unautherized";
 		}

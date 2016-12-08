@@ -238,14 +238,14 @@
 								<span>Mark Sheets</span>
 							</a>
 							<ul class="sub">
-								<li><a href="general.html">1<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">2<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">3<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">4<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">5<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">6<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">7<sup>st</sup> Semester</a></li>
-								<li><a href="general.html">8<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/1'); ?>">1<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/2'); ?>">2<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/3'); ?>">3<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/4'); ?>">4<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/5'); ?>">5<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/6'); ?>">6<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/7'); ?>">7<sup>st</sup> Semester</a></li>
+								<li><a href="<?php echo base_url('/home/marksheet/8'); ?>">8<sup>st</sup> Semester</a></li>
 							</ul>
 						</li>
 					</ul>
